@@ -149,8 +149,8 @@ em { font-style: italic; }
   position: relative;
   transition: color 200ms var(--ease);
 }
-.nav-links a:hover,
-.nav-links a.is-active { color: var(--ink); }
+.nav-links a:hover { color: var(--ink); }
+.nav-links a.is-active { color: var(--accent); }
 
 .btn {
   display: inline-flex;
@@ -166,16 +166,18 @@ em { font-style: italic; }
   font-family: inherit;
 }
 .btn:hover {
-  background: var(--ink);
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--bg);
 }
 .btn--primary {
-  background: var(--ink);
+  background: var(--accent);
+  border-color: var(--accent);
   color: var(--bg);
 }
 .btn--primary:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
   color: var(--bg);
 }
 .btn--ghost {
@@ -230,7 +232,7 @@ em { font-style: italic; }
   padding: clamp(3rem, 6vw, 4.5rem) 0;
   border-bottom: 1px solid var(--border);
 }
-.pillar .eyebrow { display: block; margin-bottom: 1rem; }
+.pillar .eyebrow { display: block; margin-bottom: 1rem; color: var(--accent); }
 .pillar h3 {
   font-size: 1.35rem;
   margin-bottom: 0.6rem;
@@ -254,8 +256,9 @@ em { font-style: italic; }
   border: 1px solid var(--border);
 }
 .compare-card--us {
-  background: var(--accent-soft);
+  background: var(--accent);
   border-color: var(--accent);
+  color: var(--bg);
 }
 .compare-card--them {
   background: var(--bg-muted);
@@ -268,7 +271,7 @@ em { font-style: italic; }
   padding-bottom: 0.85rem;
   border-bottom: 1px solid var(--border-strong);
 }
-.compare-card--us h3 { color: var(--accent); border-color: var(--accent); }
+.compare-card--us h3 { color: var(--bg); border-color: rgba(251,250,246,0.25); }
 .compare-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
 .compare-card li {
   font-size: 0.92rem;
@@ -277,7 +280,7 @@ em { font-style: italic; }
   gap: 0.6rem;
   align-items: flex-start;
 }
-.compare-card--us li { color: var(--accent); }
+.compare-card--us li { color: var(--bg); }
 .compare-card--them li { color: var(--ink-muted); }
 .compare-card--us li::before {
   content: "";
@@ -286,7 +289,7 @@ em { font-style: italic; }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--bg);
   margin-top: 0.55rem;
 }
 .compare-card--them li::before {
@@ -303,7 +306,7 @@ em { font-style: italic; }
   text-align: center;
   margin-bottom: 2.5rem;
 }
-.section-head .eyebrow { display: block; margin-bottom: 0.75rem; }
+.section-head .eyebrow { display: block; margin-bottom: 0.75rem; color: var(--accent); }
 .section-head h2 { max-width: 22ch; margin: 0 auto 1rem; }
 .section-head p {
   color: var(--ink-muted);
@@ -458,14 +461,14 @@ em { font-style: italic; }
   width: 88px;
   height: 88px;
   border-radius: 50%;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-strong);
+  background: var(--accent);
+  border: 1px solid var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
   font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--bg);
   margin-bottom: 1.25rem;
   letter-spacing: 0.02em;
 }
@@ -594,8 +597,8 @@ em { font-style: italic; }
 }
 .article-hero .tag {
   padding: 4px 10px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--bg);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.7rem;
@@ -670,7 +673,7 @@ em { font-style: italic; }
   padding: clamp(3rem, 6vw, 5rem) 0;
   border-bottom: 1px solid var(--border);
 }
-.page-hero .eyebrow { display: block; margin-bottom: 1rem; }
+.page-hero .eyebrow { display: block; margin-bottom: 1rem; color: var(--accent); }
 .page-hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: 1.5rem; max-width: 18ch; }
 .page-hero .lede { max-width: 50ch; }
 
@@ -705,9 +708,9 @@ em { font-style: italic; }
   transition: all 200ms var(--ease);
 }
 .filter-chip:hover, .filter-chip.is-active {
-  background: var(--ink);
+  background: var(--accent);
   color: var(--bg);
-  border-color: var(--ink);
+  border-color: var(--accent);
 }
 
 /* ---------- Contact page ---------- */
@@ -790,8 +793,8 @@ em { font-style: italic; }
   font-family: var(--font-mono);
   font-size: 0.75rem;
   padding: 4px 10px;
-  background: var(--bg-muted);
-  color: var(--ink-muted);
+  background: var(--accent-soft);
+  color: var(--accent);
   letter-spacing: 0.04em;
 }
 
